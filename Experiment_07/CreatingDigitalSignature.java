@@ -1,0 +1,2 @@
+
+import java.security.*; public class CreatingDigitalSignature{ public static void main(String[] a)throws Exception{ KeyPairGenerator g=KeyPairGenerator.getInstance("DSA"); g.initialize(2048); KeyPair p=g.generateKeyPair(); Signature s=Signature.getInstance("SHA256withDSA"); s.initSign(p.getPrivate()); byte[] msg="Hello".getBytes(); s.update(msg); System.out.println(new String(s.sign(),"UTF8")); }}

@@ -1,0 +1,1 @@
+Use GMER or rkhunter as described in the lab manual.

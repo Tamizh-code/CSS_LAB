@@ -1,0 +1,3 @@
+
+class RFH{ String encode(String m,int d){ int r=d,l=m.length(),c=l/d,k=0; char[][] mat=new char[r][c]; String e=""; for(int i=0;i<c;i++)for(int j=0;j<r;j++)mat[j][i]=k<l?m.charAt(k++):'X'; for(int i=0;i<r;i++)for(int j=0;j<c;j++)e+=mat[i][j]; return e;} String decode(String e,int d){ int r=d,l=e.length(),c=l/d,k=0; char[][] mat=new char[r][c]; String dec=""; for(int i=0;i<r;i++)for(int j=0;j<c;j++)mat[i][j]=e.charAt(k++); for(int i=0;i<c;i++)for(int j=0;j<r;j++)dec+=mat[j][i]; return dec;}}
+public class RailFenceCipher{ public static void main(String[] a)throws Exception{ RFH rf=new RFH(); String m="Anna University, Chennai"; String e=rf.encode(m,2); System.out.println(e); System.out.println(rf.decode(e,2));}}

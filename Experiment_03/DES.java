@@ -1,0 +1,2 @@
+
+import javax.crypto.*; public class DES{ public static void main(String[] a)throws Exception{ KeyGenerator kg=KeyGenerator.getInstance("DES"); SecretKey k=kg.generateKey(); Cipher c=Cipher.getInstance("DES/ECB/PKCS5Padding"); c.init(Cipher.ENCRYPT_MODE,k); byte[] t="Secret Information".getBytes(); byte[] e=c.doFinal(t); c.init(Cipher.DECRYPT_MODE,k); System.out.println(new String(c.doFinal(e))); }}

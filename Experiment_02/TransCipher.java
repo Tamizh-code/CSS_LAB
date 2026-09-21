@@ -1,0 +1,2 @@
+
+import java.util.*; public class TransCipher{ public static void main(String[] a){ Scanner sc=new Scanner(System.in); System.out.println("Enter plain text"); String pl=sc.nextLine(); String s=pl.replace(" ",""); int col=4,row=s.length()/col; char[][] ch=new char[row][col]; int l=0; for(int i=0;i<row;i++)for(int j=0;j<col;j++)ch[i][j]=l<s.length()?s.charAt(l++):'#'; char[][] tr=new char[col][row]; for(int i=0;i<row;i++)for(int j=0;j<col;j++)tr[j][i]=ch[i][j]; for(int i=0;i<col;i++)for(int j=0;j<row;j++)System.out.print(tr[i][j]); sc.close(); }}

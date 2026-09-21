@@ -1,0 +1,1 @@
+Snort IDS demonstration. Install Snort and follow the lab manual configuration steps.
